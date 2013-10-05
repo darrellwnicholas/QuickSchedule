@@ -92,9 +92,9 @@
     return ([NSKeyedArchiver archiveRootObject:self.daysArray toFile:path] && [NSKeyedArchiver archiveRootObject:self.masterEmployeeList toFile:empPath]);
 }
 
-- (Employee *)createEmployeeWithFirstName:(NSString*)first andLastName:(NSString*)last
+- (Employee *)createEmployeeWithFirstName:(NSString*)first andLastName:(NSString*)last andEmail:(NSString *)email
 {
-    Employee *employee = [[Employee alloc] initWithFirstName:first lastName:last];
+    Employee *employee = [[Employee alloc] initWithFirstName:first lastName:last email:email];
     return employee;
 }
 - (WorkShift *)createShift

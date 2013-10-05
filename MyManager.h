@@ -21,7 +21,7 @@
 - (NSString *)employeeArchivePath;
 - (BOOL)saveChanges;
 - (WorkDay *)createDay;
-- (Employee *)createEmployeeWithFirstName:(NSString*)first andLastName:(NSString*)last;
+- (Employee *)createEmployeeWithFirstName:(NSString*)first andLastName:(NSString*)last andEmail:(NSString *)email;
 - (WorkShift *)createShift;
 - (void)assignEmployee:(Employee*)employee toShift:(WorkShift*)shift;
 - (void)removeEmployee:(Employee*)emp;

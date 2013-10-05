@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "WorkDay.h"
 #import "WorkShift.h"
 
-@interface ScheduleViewController : UITableViewController
+@interface ScheduleViewController : UITableViewController <MFMailComposeViewControllerDelegate>
+{
+    MFMailComposeViewController *mailComposer;
+}
 @property (strong, nonatomic) NSMutableArray *daysArray;
 
 - (IBAction)done:(UIStoryboardSegue *)segue;
+- (IBAction)shareSchedule:(id)sender;
 
 @end

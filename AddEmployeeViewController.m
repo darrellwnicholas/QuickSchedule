@@ -25,7 +25,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if ((textField == self.firstNameField) || (textField == self.lastNameField)) {
+    if ((textField == self.firstNameField) || (textField == self.lastNameField) || (textField == self.emailField)) {
         [textField resignFirstResponder];
     }
     return YES;
@@ -33,9 +33,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        if ([self.firstNameField.text length] || [self.lastNameField.text length]) {
+        if ([self.firstNameField.text length] || [self.lastNameField.text length] || [self.emailField.text length]) {
             
-            Employee *newEmployee = [[MyManager sharedManager] createEmployeeWithFirstName:self.firstNameField.text andLastName:self.lastNameField.text];
+            Employee *newEmployee = [[MyManager sharedManager] createEmployeeWithFirstName:self.firstNameField.text andLastName:self.lastNameField.text andEmail:self.emailField.text];
             [[MyManager sharedManager] addEmployeeToList:newEmployee];
             self.employee = newEmployee;
             

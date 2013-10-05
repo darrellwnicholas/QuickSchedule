@@ -95,6 +95,7 @@
     
     Employee *employeeAtIndex = [[MyManager sharedManager] objectInListAtIndex:indexPath.row];
     cell.textLabel.text = [employeeAtIndex description];
+    cell.detailTextLabel.text = [employeeAtIndex email];
     return cell;
 }
 

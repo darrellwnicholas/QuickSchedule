@@ -25,6 +25,7 @@
 		5B38E02E17B7BFF400422EC1 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02917B7BFF400422EC1 /* Employee.m */; };
 		5B38E02F17B7BFF400422EC1 /* WorkShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02B17B7BFF400422EC1 /* WorkShift.m */; };
 		5B38E03017B7BFF400422EC1 /* WorkDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02D17B7BFF400422EC1 /* WorkDay.m */; };
+		5BAEA608180058EC0038A5ED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAEA607180058EC0038A5ED /* MessageUI.framework */; };
 		5BB7C95E17E8D45900608790 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7C95D17E8D45900608790 /* MyManager.m */; };
 		5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */; };
 		5BCFBBEA17BFB66900C2ABC4 /* EmployeeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE917BFB66900C2ABC4 /* EmployeeDataController.m */; };
@@ -61,6 +62,7 @@
 		5B38E02B17B7BFF400422EC1 /* WorkShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkShift.m; sourceTree = "<group>"; };
 		5B38E02C17B7BFF400422EC1 /* WorkDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkDay.h; sourceTree = "<group>"; };
 		5B38E02D17B7BFF400422EC1 /* WorkDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkDay.m; sourceTree = "<group>"; };
+		5BAEA607180058EC0038A5ED /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5BB7C95C17E8D45900608790 /* MyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
 		5BB7C95D17E8D45900608790 /* MyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
 		5BCFBBE517BFA4F700C2ABC4 /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAEA608180058EC0038A5ED /* MessageUI.framework in Frameworks */,
 				5B38E00617B7BFB000422EC1 /* UIKit.framework in Frameworks */,
 				5B38E00817B7BFB000422EC1 /* Foundation.framework in Frameworks */,
 				5B38E00A17B7BFB000422EC1 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +111,7 @@
 		5B38E00417B7BFB000422EC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BAEA607180058EC0038A5ED /* MessageUI.framework */,
 				5B38E00517B7BFB000422EC1 /* UIKit.framework */,
 				5B38E00717B7BFB000422EC1 /* Foundation.framework */,
 				5B38E00917B7BFB000422EC1 /* CoreGraphics.framework */,

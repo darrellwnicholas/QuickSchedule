@@ -13,6 +13,7 @@
 
 @interface ScheduleViewController ()
 
+
 @end
 
 @implementation ScheduleViewController
@@ -181,4 +182,56 @@
 #pragma mark - Table view delegate
 
 
+     
+#pragma mark - mail compose delegate
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    if (result) {
+        NSLog(@"Result : %d",result);
+    }
+    if (error) {
+        NSLog(@"Error : %@",error);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (IBAction)shareSchedule:(id)sender {
+
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateStyle:NSDateFormatterNoStyle];
+    [df setTimeStyle:NSDateFormatterShortStyle];
+    //NSMutableArray *bobsDays = [[NSMutableArray alloc] init];
+
+    NSString *scheduleString = @"--Schedule--\n";
+    for (WorkDay *day in self.daysArray) {
+        NSString *dayString = [NSString stringWithFormat:@"----\n%@\n----\n", day.name];
+        scheduleString = [scheduleString stringByAppendingString:dayString];
+        
+        for (WorkShift *shift in day.shifts) {
+            if (shift.assignedEmployee != nil) {
+                NSString *shiftString = [NSString stringWithFormat:@"%@: %@\n %@ - %@\n", shift.shiftName, shift.assignedEmployee.description, [df stringFromDate:shift.startTime], [df stringFromDate:shift.endTime]];
+                scheduleString = [scheduleString stringByAppendingString:shiftString];
+            } else if (shift.assignedEmployee == nil){
+            NSString *shiftString = [NSString stringWithFormat:@"%@: **NOT YET ASSIGNED**\n %@ - %@\n", shift.shiftName, [df stringFromDate:shift.startTime], [df stringFromDate:shift.endTime]];
+            scheduleString = [scheduleString stringByAppendingString:shiftString];
+            }
+                //NSLog(@"  (%@ to %@)\n",[df stringFromDate:shift.startTime], [df stringFromDate:shift.endTime]);
+                //NSLog(@" Assigned Employee: %@", shift.assignedEmployee.description);
+            
+        }
+    }
+    //NSLog(@"%@", scheduleString);
+    NSMutableArray *addresses = [[NSMutableArray alloc]init];
+    for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
+        [addresses addObject:emp.email];
+    }
+    
+    mailComposer = [[MFMailComposeViewController alloc]init];
+    mailComposer.mailComposeDelegate = self;
+    [mailComposer setToRecipients:addresses];
+    [mailComposer setSubject:@"Schedule"];
+    [mailComposer setMessageBody:scheduleString isHTML:NO];
+     [self presentViewController:mailComposer animated:YES completion:nil];
+
+}
 @end

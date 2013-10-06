@@ -150,7 +150,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         NSArray *updateIndexPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:path.row inSection:path.section], nil];
-        WorkDay *thisDay = [self.daysArray objectAtIndex:path.section];
+        WorkDay *thisDay = [[[MyManager sharedManager]daysArray] objectAtIndex:path.section];
         WorkShift *thisShift = [thisDay.shifts objectAtIndex:path.row];
         thisShift.assignedEmployee.hours -= thisShift.hours;
         thisShift.assignedEmployee = nil;
@@ -211,14 +211,10 @@
 
     NSString *scheduleString = @"--Schedule--\n";
     
-    for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
-        NSString *hourString = [self stringFromHours:emp.hours];
-        NSString *empString = [NSString stringWithFormat:@"%@, scheduled for %@\n", emp.description, hourString];
-        scheduleString = [scheduleString stringByAppendingString:empString];
-    }
+
     
     for (WorkDay *day in [[MyManager sharedManager] daysArray]) {
-        NSString *dayString = [NSString stringWithFormat:@"----\n%@\n----\n", day.name];
+        NSString *dayString = [NSString stringWithFormat:@"----\n%@\n", day.name];
         scheduleString = [scheduleString stringByAppendingString:dayString];
         
         for (WorkShift *shift in day.shifts) {
@@ -234,6 +230,14 @@
             
         }
     }
+    NSString *totalHrsHeader = @"--------\n--------\nTotal Assigned Hours:\n----\n";
+    scheduleString = [scheduleString stringByAppendingString:totalHrsHeader];
+    for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
+        NSString *hourString = [self stringFromHours:emp.hours];
+        NSString *empString = [NSString stringWithFormat:@"%@, scheduled for %@\n", emp.description, hourString];
+        scheduleString = [scheduleString stringByAppendingString:empString];
+    }
+    
     //NSLog(@"%@", scheduleString);
     NSMutableArray *addresses = [[NSMutableArray alloc]init];
     for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {

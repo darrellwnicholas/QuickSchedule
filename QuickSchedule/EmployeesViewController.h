@@ -11,12 +11,13 @@
 #import "ScheduleViewController.h"
 #import "MyManager.h"
 
-@class EmployeeDataController;
+
 
 @interface EmployeesViewController : UITableViewController
 
 
 @property (strong, nonatomic) WorkShift *activeShift;
+
 
 - (IBAction)done:(UIStoryboardSegue *)segue;
 - (IBAction)cancel:(UIStoryboardSegue *)segue;

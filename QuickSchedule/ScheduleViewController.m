@@ -135,32 +135,37 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"Unassign";
 }
 
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)path
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        
-        WorkDay *thisDay = [self.daysArray objectAtIndex:indexPath.section];
-        WorkShift *thisShift = [thisDay.shifts objectAtIndex:indexPath.row];
+        NSArray *updateIndexPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:path.row inSection:path.section], nil];
+        WorkDay *thisDay = [self.daysArray objectAtIndex:path.section];
+        WorkShift *thisShift = [thisDay.shifts objectAtIndex:path.row];
+        thisShift.assignedEmployee.hours -= thisShift.hours;
         thisShift.assignedEmployee = nil;
         [[MyManager sharedManager] saveChanges];
-        [self.tableView reloadData];
+        [self.tableView reloadRowsAtIndexPaths:updateIndexPaths
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+        
     } 
 }
+
+
 
 
 /*
@@ -195,6 +200,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+- (NSString *)stringFromHours:(NSTimeInterval)interval {
+    NSInteger ti = (NSInteger)interval;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hour = (ti / 3600);
+    return [NSString stringWithFormat:@"%i:%02i Hours", hour, minutes];
+}
 - (IBAction)shareSchedule:(id)sender {
 
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -203,6 +214,13 @@
     //NSMutableArray *bobsDays = [[NSMutableArray alloc] init];
 
     NSString *scheduleString = @"--Schedule--\n";
+    
+    for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
+        NSString *hourString = [self stringFromHours:emp.hours];
+        NSString *empString = [NSString stringWithFormat:@"%@, scheduled for %@\n", emp.description, hourString];
+        scheduleString = [scheduleString stringByAppendingString:empString];
+    }
+    
     for (WorkDay *day in self.daysArray) {
         NSString *dayString = [NSString stringWithFormat:@"----\n%@\n----\n", day.name];
         scheduleString = [scheduleString stringByAppendingString:dayString];

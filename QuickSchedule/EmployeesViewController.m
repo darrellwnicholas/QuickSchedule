@@ -8,11 +8,11 @@
 
 #import "EmployeesViewController.h"
 #import "AddEmployeeViewController.h"
-#import "EmployeeDataController.h"
+
 #import "ScheduleViewController.h"
 
 @interface EmployeesViewController ()
-
+@property (nonatomic) float assignedHours;
 @end
 
 @implementation EmployeesViewController
@@ -46,9 +46,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[MyManager sharedManager] saveChanges];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
+        [[MyManager sharedManager] calculateHoursForEmployee:emp];
+        
+    }
 }
 
 
@@ -88,14 +98,25 @@
     return [[MyManager sharedManager] countOfList];
 }
 
+- (NSString *)stringFromHours:(NSTimeInterval)interval {
+    NSInteger ti = (NSInteger)interval;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hour = (ti / 3600);
+    return [NSString stringWithFormat:@"%i:%02i Hours", hour, minutes];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EmployeeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     Employee *employeeAtIndex = [[MyManager sharedManager] objectInListAtIndex:indexPath.row];
+    
+    
+    
     cell.textLabel.text = [employeeAtIndex description];
-    cell.detailTextLabel.text = [employeeAtIndex email];
+    cell.detailTextLabel.textColor = [UIColor blueColor];
+    cell.detailTextLabel.text = [self stringFromHours:employeeAtIndex.hours];
     return cell;
 }
 
@@ -170,6 +191,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.activeShift setAssignedEmployee:[[MyManager sharedManager] objectInListAtIndex:indexPath.row]];
+    self.activeShift.assignedEmployee.hours += self.activeShift.hours;
     
     [self.navigationController popViewControllerAnimated:YES];
 

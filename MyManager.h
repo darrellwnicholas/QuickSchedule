@@ -28,6 +28,7 @@
 - (void)addEmployeeToList:(Employee *)newEmployee;
 - (NSUInteger)countOfList;
 - (Employee *)objectInListAtIndex:(NSUInteger)theIndex;
+- (void)calculateHoursForEmployee:(Employee *)emp;
 
 
 @end

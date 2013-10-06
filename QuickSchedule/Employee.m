@@ -32,6 +32,7 @@
 {
     [aCoder encodeObject:self.firstName forKey:@"firstnamekey"];
     [aCoder encodeObject:self.lastName forKey:@"lastnamekey"];
+    [aCoder encodeObject:[NSNumber numberWithDouble:self.hours] forKey:@"hourskey"];
     [aCoder encodeObject:self.email forKey:@"emailkey"];
 }
 
@@ -39,6 +40,7 @@
 {
     self.firstName = [aDecoder decodeObjectForKey:@"firstnamekey"];
     self.lastName = [aDecoder decodeObjectForKey:@"lastnamekey"];
+    self.hours = [[aDecoder decodeObjectForKey:@"hourskey"] doubleValue];
     self.email = [aDecoder decodeObjectForKey:@"emailkey"];
     
     return self;

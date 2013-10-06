@@ -107,6 +107,19 @@
     shift.assignedEmployee = employee;
 }
 
+- (void)calculateHoursForEmployee:(Employee *)emp
+{
+    emp.hours = 0;
+    for (WorkDay *day in self.daysArray) {
+        for (WorkShift *shift in day.shifts) {
+            if ([shift.assignedEmployee.description isEqualToString:emp.description]) {
+                emp.hours += shift.hours;
+            }
+        }
+    }
+    
+}
+
 - (void)addEmployeeToList:(Employee *)newEmployee {
     [self.masterEmployeeList addObject:newEmployee];
 }

@@ -35,9 +35,24 @@
     if (self) {
         NSString *path = [self itemArchivePath];
         _daysArray = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        /*NSSortDescriptor *sortDescriptor;
+        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dayNumber" ascending:YES];
+        NSArray *sortDescriptors = @[sortDescriptor];
+        _daysArray = [[_daysArray sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+         */
         [self initializeEmployeeList];
+        
     }
     return self;
+}
+
+- (NSMutableArray *)daysArray
+{
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dayNumber" ascending:YES];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    _daysArray = [[_daysArray sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+    return _daysArray;
 }
 
 - (void)initializeEmployeeList

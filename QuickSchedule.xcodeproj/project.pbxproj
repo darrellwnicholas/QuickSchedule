@@ -27,6 +27,7 @@
 		5B38E03017B7BFF400422EC1 /* WorkDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02D17B7BFF400422EC1 /* WorkDay.m */; };
 		5BAEA608180058EC0038A5ED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAEA607180058EC0038A5ED /* MessageUI.framework */; };
 		5BB7C95E17E8D45900608790 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7C95D17E8D45900608790 /* MyManager.m */; };
+		5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC119621801131F00DC2904 /* DayOrderViewController.m */; };
 		5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */; };
 		5BCFBBEA17BFB66900C2ABC4 /* EmployeeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE917BFB66900C2ABC4 /* EmployeeDataController.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,8 @@
 		5BAEA607180058EC0038A5ED /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5BB7C95C17E8D45900608790 /* MyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
 		5BB7C95D17E8D45900608790 /* MyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
+		5BC119611801131F00DC2904 /* DayOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOrderViewController.h; sourceTree = "<group>"; };
+		5BC119621801131F00DC2904 /* DayOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOrderViewController.m; sourceTree = "<group>"; };
 		5BCFBBE517BFA4F700C2ABC4 /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
 		5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		5BCFBBE817BFB66900C2ABC4 /* EmployeeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDataController.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		5B38DFF917B7BFB000422EC1 = {
 			isa = PBXGroup;
 			children = (
+				5BC119611801131F00DC2904 /* DayOrderViewController.h */,
+				5BC119621801131F00DC2904 /* DayOrderViewController.m */,
 				5BB7C95B17E8D42000608790 /* DataManager */,
 				5BC7743017E9F8140066648E /* WorkShift Controllers */,
 				5BC7742F17E9F7970066648E /* Employee Controllers */,
@@ -296,6 +301,7 @@
 				5B140B5517B7CD470021F190 /* ScheduleViewController.m in Sources */,
 				5B140B5817B7D75C0021F190 /* EmployeesViewController.m in Sources */,
 				5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */,
+				5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */,
 				5BCFBBEA17BFB66900C2ABC4 /* EmployeeDataController.m in Sources */,
 				5B18C31917C12D8200711181 /* EditShiftsViewController.m in Sources */,
 				5B0E186D17D4E43000237B76 /* EditDayViewController.m in Sources */,

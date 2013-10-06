@@ -45,14 +45,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.daysArray = [[MyManager sharedManager] daysArray];
 
     self.title = @"Schedule";
-    WorkDay *tmp = [daysArray objectAtIndex:0];
-    WorkShift *shft = [tmp.shifts objectAtIndex:0];
-    NSLog(@"Monday Shift 1 length: %@", [shft stringFromTimeInterval:shft.hours]);
-
-
+    
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -66,6 +61,7 @@
 {
     if ([[segue identifier] isEqualToString:@"DoneEditing"]) {
         [[MyManager sharedManager] saveChanges];
+        [self.tableView reloadData];
     }
 }
 
@@ -80,20 +76,20 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.daysArray count];
+    return [[[MyManager sharedManager] daysArray] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[[self.daysArray objectAtIndex:section] shifts] count];
-    //return [[[[[MyManager sharedManager] daysArray] objectAtIndex:section] shifts] count];
+    //return [[[self.daysArray objectAtIndex:section] shifts] count];
+    return [[[[[MyManager sharedManager] daysArray] objectAtIndex:section] shifts] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [[self.daysArray objectAtIndex:section] name];
-    //return [[[[MyManager sharedManager] daysArray] objectAtIndex:section] name];
+    //return [[self.daysArray objectAtIndex:section] name];
+    return [[[[MyManager sharedManager] daysArray] objectAtIndex:section] name];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,8 +100,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    WorkDay *day = [self.daysArray objectAtIndex:indexPath.section];
-    //WorkDay *day = [[MyManager sharedManager] daysArray] objectAtIndex:indexPath.section];
+    //WorkDay *day = [self.daysArray objectAtIndex:indexPath.section];
+    WorkDay *day = [[[MyManager sharedManager] daysArray] objectAtIndex:indexPath.section];
     WorkShift *shift = [day.shifts objectAtIndex:indexPath.row];
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setTimeStyle:NSDateFormatterShortStyle];
@@ -123,7 +119,7 @@
     if ([[segue identifier] isEqualToString:@"ChooseEmployee"]) {
         
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        WorkDay *day = [self.daysArray objectAtIndex:path.section];
+        WorkDay *day = [[[MyManager sharedManager] daysArray] objectAtIndex:path.section];
         WorkShift *thisShift = [day.shifts objectAtIndex:path.row];
         
         EmployeesViewController *employeeController = [segue destinationViewController];
@@ -221,7 +217,7 @@
         scheduleString = [scheduleString stringByAppendingString:empString];
     }
     
-    for (WorkDay *day in self.daysArray) {
+    for (WorkDay *day in [[MyManager sharedManager] daysArray]) {
         NSString *dayString = [NSString stringWithFormat:@"----\n%@\n----\n", day.name];
         scheduleString = [scheduleString stringByAppendingString:dayString];
         

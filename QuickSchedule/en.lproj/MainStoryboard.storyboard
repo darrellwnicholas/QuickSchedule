@@ -81,7 +81,13 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Schedule" id="rCh-kx-ORA"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="rCh-kx-ORA">
+                        <barButtonItem key="leftBarButtonItem" title="Day Order" id="QEo-PF-p5D">
+                            <connections>
+                                <segue destination="ppc-1f-hFO" kind="modal" identifier="StartDaySegue" id="8kh-8H-XJM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-9t-e87" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -390,7 +396,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZP-Ni-Y7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ic7-Z4-kew" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="-789"/>
+            <point key="canvasLocation" x="1860" y="-789"/>
+        </scene>
+        <!--Day Order View Controller-->
+        <scene sceneID="w7G-EP-DMo">
+            <objects>
+                <tableViewController id="qY1-6M-epf" customClass="DayOrderViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mbh-2V-PTg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayOrderCell" id="yEe-jT-kTM">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yEe-jT-kTM" id="wXd-I4-mcf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="qY1-6M-epf" id="yqC-Js-yDk"/>
+                            <outlet property="delegate" destination="qY1-6M-epf" id="dpn-vh-Pqr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8vq-F4-uuu">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="I4j-0R-LoC">
+                            <connections>
+                                <segue destination="8LY-xE-bPG" kind="unwind" identifier="DoneEditing" unwindAction="done:" id="eEN-TJ-aaS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHX-7O-U1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8LY-xE-bPG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ybv-1K-a9t">
@@ -408,7 +451,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xug-Km-J3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="-789"/>
+            <point key="canvasLocation" x="1422" y="-789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uUu-cu-DEw">
@@ -601,6 +644,24 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1745" y="704"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9fD-JW-5cX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ppc-1f-hFO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8x7-mr-hqf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qY1-6M-epf" kind="relationship" relationship="rootViewController" id="8e2-p0-Lsx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cM4-Ju-f1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-789"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

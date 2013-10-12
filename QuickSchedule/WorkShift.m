@@ -13,8 +13,18 @@
 
 - (void) encodeWithCoder:(NSCoder *)encoder
 {
-    NSTimeInterval timeInterval = [endTime timeIntervalSinceDate:startTime];
-    self.hours = timeInterval;
+    NSTimeInterval timeInterval;
+   // NSTimeInterval timeInterval = [endTime timeIntervalSinceDate:startTime];
+   // self.hours = timeInterval;
+    if ([self.startTime compare:self.endTime] == NSOrderedDescending) {
+        timeInterval = 86400;
+        NSTimeInterval temp = [self.startTime timeIntervalSinceDate:self.endTime];
+        timeInterval -= temp;
+        self.hours = timeInterval;
+    } else {
+        timeInterval = [self.endTime timeIntervalSinceDate:self.startTime];
+        self.hours = timeInterval;
+    }
     [encoder encodeObject:self.shiftName forKey:@"shiftnamekey"];
     [encoder encodeObject:[NSNumber numberWithDouble:self.hours] forKey:@"hourskey"];
     [encoder encodeObject:self.assignedEmployee forKey:@"assignedEmployeekey"];

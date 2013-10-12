@@ -26,7 +26,6 @@
 		5BB7C95E17E8D45900608790 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7C95D17E8D45900608790 /* MyManager.m */; };
 		5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC119621801131F00DC2904 /* DayOrderViewController.m */; };
 		5BC237CC1801BFD200C6CF6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237B41801BFD200C6CF6B /* Default@2x.png */; };
-		5BC237CE1801BFD200C6CF6B /* EmployeeDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237B81801BFD200C6CF6B /* EmployeeDataController.m */; };
 		5BC237CF1801BFD200C6CF6B /* EmployeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */; };
 		5BC237D01801BFD200C6CF6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237BB1801BFD200C6CF6B /* InfoPlist.strings */; };
 		5BC237D11801BFD200C6CF6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237BD1801BFD200C6CF6B /* MainStoryboard.storyboard */; };
@@ -78,8 +77,6 @@
 		5BC237B41801BFD200C6CF6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5BC237B51801BFD200C6CF6B /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		5BC237B61801BFD200C6CF6B /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
-		5BC237B71801BFD200C6CF6B /* EmployeeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDataController.h; sourceTree = "<group>"; };
-		5BC237B81801BFD200C6CF6B /* EmployeeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDataController.m; sourceTree = "<group>"; };
 		5BC237B91801BFD200C6CF6B /* EmployeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeesViewController.h; sourceTree = "<group>"; };
 		5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeesViewController.m; sourceTree = "<group>"; };
 		5BC237BC1801BFD200C6CF6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -202,6 +199,19 @@
 			name = DataManager;
 			sourceTree = "<group>";
 		};
+		5BBCE7691808D255004C5606 /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BC237B51801BFD200C6CF6B /* Employee.h */,
+				5BC237B61801BFD200C6CF6B /* Employee.m */,
+				5BC237C51801BFD200C6CF6B /* WorkDay.h */,
+				5BC237C61801BFD200C6CF6B /* WorkDay.m */,
+				5BC237C71801BFD200C6CF6B /* WorkShift.h */,
+				5BC237C81801BFD200C6CF6B /* WorkShift.m */,
+			);
+			name = "Model Classes";
+			sourceTree = "<group>";
+		};
 		5BC237AF1801BFD200C6CF6B /* QuickSchedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,10 +220,7 @@
 				5BC237B21801BFD200C6CF6B /* Default-568h@2x.png */,
 				5BC237B31801BFD200C6CF6B /* Default.png */,
 				5BC237B41801BFD200C6CF6B /* Default@2x.png */,
-				5BC237B51801BFD200C6CF6B /* Employee.h */,
-				5BC237B61801BFD200C6CF6B /* Employee.m */,
-				5BC237B71801BFD200C6CF6B /* EmployeeDataController.h */,
-				5BC237B81801BFD200C6CF6B /* EmployeeDataController.m */,
+				5BBCE7691808D255004C5606 /* Model Classes */,
 				5BC237B91801BFD200C6CF6B /* EmployeesViewController.h */,
 				5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */,
 				5BC237BB1801BFD200C6CF6B /* InfoPlist.strings */,
@@ -223,10 +230,6 @@
 				5BC237C11801BFD200C6CF6B /* QuickSchedule-Prefix.pch */,
 				5BC237C21801BFD200C6CF6B /* ScheduleViewController.h */,
 				5BC237C31801BFD200C6CF6B /* ScheduleViewController.m */,
-				5BC237C51801BFD200C6CF6B /* WorkDay.h */,
-				5BC237C61801BFD200C6CF6B /* WorkDay.m */,
-				5BC237C71801BFD200C6CF6B /* WorkShift.h */,
-				5BC237C81801BFD200C6CF6B /* WorkShift.m */,
 			);
 			path = QuickSchedule;
 			sourceTree = "<group>";
@@ -360,7 +363,6 @@
 				5B38E02F17B7BFF400422EC1 /* WorkShift.m in Sources */,
 				5B38E03017B7BFF400422EC1 /* WorkDay.m in Sources */,
 				5BC237D41801BFD200C6CF6B /* ScheduleViewController.m in Sources */,
-				5BC237CE1801BFD200C6CF6B /* EmployeeDataController.m in Sources */,
 				5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */,
 				5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */,
 				5B18C31917C12D8200711181 /* EditShiftsViewController.m in Sources */,

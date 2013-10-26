@@ -10,28 +10,31 @@
 		5B0E186D17D4E43000237B76 /* EditDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E186C17D4E43000237B76 /* EditDayViewController.m */; };
 		5B0E187017D4E4E000237B76 /* EditShiftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E186F17D4E4E000237B76 /* EditShiftDetailViewController.m */; };
 		5B18C31917C12D8200711181 /* EditShiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B18C31817C12D8200711181 /* EditShiftsViewController.m */; };
+		5B19CACD1810CA0A00B8220F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B19CACC1810CA0A00B8220F /* Default-568h@2x.png */; };
+		5B19CAD31810DFF500B8220F /* temp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B19CAD21810DFF500B8220F /* temp2.png */; };
 		5B38E00617B7BFB000422EC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B38E00517B7BFB000422EC1 /* UIKit.framework */; };
 		5B38E00817B7BFB000422EC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B38E00717B7BFB000422EC1 /* Foundation.framework */; };
 		5B38E00A17B7BFB000422EC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B38E00917B7BFB000422EC1 /* CoreGraphics.framework */; };
 		5B38E01017B7BFB000422EC1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B38E00E17B7BFB000422EC1 /* InfoPlist.strings */; };
 		5B38E01217B7BFB000422EC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E01117B7BFB000422EC1 /* main.m */; };
 		5B38E01617B7BFB000422EC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E01517B7BFB000422EC1 /* AppDelegate.m */; };
-		5B38E01817B7BFB000422EC1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B38E01717B7BFB000422EC1 /* Default.png */; };
-		5B38E01C17B7BFB000422EC1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B38E01B17B7BFB000422EC1 /* Default-568h@2x.png */; };
 		5B38E01F17B7BFB000422EC1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B38E01D17B7BFB000422EC1 /* MainStoryboard.storyboard */; };
 		5B38E02E17B7BFF400422EC1 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02917B7BFF400422EC1 /* Employee.m */; };
 		5B38E02F17B7BFF400422EC1 /* WorkShift.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02B17B7BFF400422EC1 /* WorkShift.m */; };
 		5B38E03017B7BFF400422EC1 /* WorkDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B38E02D17B7BFF400422EC1 /* WorkDay.m */; };
+		5B6E666518123E4C005D8269 /* shareImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E666418123E4C005D8269 /* shareImage2.png */; };
+		5B6E666718123E8E005D8269 /* shareImage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E666618123E8E005D8269 /* shareImage2@2x.png */; };
 		5BAEA608180058EC0038A5ED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAEA607180058EC0038A5ED /* MessageUI.framework */; };
 		5BB7C95E17E8D45900608790 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7C95D17E8D45900608790 /* MyManager.m */; };
 		5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC119621801131F00DC2904 /* DayOrderViewController.m */; };
-		5BC237CC1801BFD200C6CF6B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237B41801BFD200C6CF6B /* Default@2x.png */; };
 		5BC237CF1801BFD200C6CF6B /* EmployeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */; };
 		5BC237D01801BFD200C6CF6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237BB1801BFD200C6CF6B /* InfoPlist.strings */; };
 		5BC237D11801BFD200C6CF6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237BD1801BFD200C6CF6B /* MainStoryboard.storyboard */; };
 		5BC237D41801BFD200C6CF6B /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237C31801BFD200C6CF6B /* ScheduleViewController.m */; };
 		5BC237D91801C01600C6CF6B /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237D81801C01600C6CF6B /* shareIcon.png */; };
 		5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */; };
+		5BF6251D1810606200B58B64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6251A1810606200B58B64 /* Default.png */; };
+		5BF6251E1810606200B58B64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6251B1810606200B58B64 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,8 @@
 		5B140B5717B7D75C0021F190 /* EmployeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmployeesViewController.m; path = QuickSchedule/EmployeesViewController.m; sourceTree = "<group>"; };
 		5B18C31717C12D8200711181 /* EditShiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditShiftsViewController.h; sourceTree = "<group>"; };
 		5B18C31817C12D8200711181 /* EditShiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditShiftsViewController.m; sourceTree = "<group>"; };
+		5B19CACC1810CA0A00B8220F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B19CAD21810DFF500B8220F /* temp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temp2.png; sourceTree = "<group>"; };
 		5B38E00217B7BFB000422EC1 /* QuickSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B38E00517B7BFB000422EC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B38E00717B7BFB000422EC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,9 +60,6 @@
 		5B38E01317B7BFB000422EC1 /* QuickSchedule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickSchedule-Prefix.pch"; sourceTree = "<group>"; };
 		5B38E01417B7BFB000422EC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B38E01517B7BFB000422EC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B38E01717B7BFB000422EC1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5B38E01917B7BFB000422EC1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		5B38E01B17B7BFB000422EC1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5B38E01E17B7BFB000422EC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5B38E02817B7BFF400422EC1 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		5B38E02917B7BFF400422EC1 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		5B38E02B17B7BFF400422EC1 /* WorkShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkShift.m; sourceTree = "<group>"; };
 		5B38E02C17B7BFF400422EC1 /* WorkDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkDay.h; sourceTree = "<group>"; };
 		5B38E02D17B7BFF400422EC1 /* WorkDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkDay.m; sourceTree = "<group>"; };
+		5B6E666418123E4C005D8269 /* shareImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareImage2.png; sourceTree = "<group>"; };
+		5B6E666618123E8E005D8269 /* shareImage2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shareImage2@2x.png"; sourceTree = "<group>"; };
 		5BAEA607180058EC0038A5ED /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5BB7C95C17E8D45900608790 /* MyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
 		5BB7C95D17E8D45900608790 /* MyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 		5BC237B11801BFD200C6CF6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BC237B21801BFD200C6CF6B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5BC237B31801BFD200C6CF6B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5BC237B41801BFD200C6CF6B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5BC237B51801BFD200C6CF6B /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		5BC237B61801BFD200C6CF6B /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		5BC237B91801BFD200C6CF6B /* EmployeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeesViewController.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 		5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		5BCFBBE817BFB66900C2ABC4 /* EmployeeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDataController.h; sourceTree = "<group>"; };
 		5BCFBBE917BFB66900C2ABC4 /* EmployeeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDataController.m; sourceTree = "<group>"; };
+		5BF6251A1810606200B58B64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5BF6251B1810606200B58B64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 		5B38DFF917B7BFB000422EC1 = {
 			isa = PBXGroup;
 			children = (
+				5B6E666618123E8E005D8269 /* shareImage2@2x.png */,
+				5B6E666418123E4C005D8269 /* shareImage2.png */,
+				5B19CAD21810DFF500B8220F /* temp2.png */,
 				5BC237D81801C01600C6CF6B /* shareIcon.png */,
 				5BC237AF1801BFD200C6CF6B /* QuickSchedule */,
 				5BC119611801131F00DC2904 /* DayOrderViewController.h */,
@@ -164,13 +172,13 @@
 		5B38E00C17B7BFB000422EC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B19CACC1810CA0A00B8220F /* Default-568h@2x.png */,
+				5BF6251A1810606200B58B64 /* Default.png */,
+				5BF6251B1810606200B58B64 /* Default@2x.png */,
 				5B38E00D17B7BFB000422EC1 /* QuickSchedule-Info.plist */,
 				5B38E00E17B7BFB000422EC1 /* InfoPlist.strings */,
 				5B38E01117B7BFB000422EC1 /* main.m */,
 				5B38E01317B7BFB000422EC1 /* QuickSchedule-Prefix.pch */,
-				5B38E01717B7BFB000422EC1 /* Default.png */,
-				5B38E01917B7BFB000422EC1 /* Default@2x.png */,
-				5B38E01B17B7BFB000422EC1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,7 +227,6 @@
 				5BC237B11801BFD200C6CF6B /* AppDelegate.m */,
 				5BC237B21801BFD200C6CF6B /* Default-568h@2x.png */,
 				5BC237B31801BFD200C6CF6B /* Default.png */,
-				5BC237B41801BFD200C6CF6B /* Default@2x.png */,
 				5BBCE7691808D255004C5606 /* Model Classes */,
 				5BC237B91801BFD200C6CF6B /* EmployeesViewController.h */,
 				5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */,
@@ -338,11 +345,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC237CC1801BFD200C6CF6B /* Default@2x.png in Resources */,
 				5B38E01017B7BFB000422EC1 /* InfoPlist.strings in Resources */,
-				5B38E01817B7BFB000422EC1 /* Default.png in Resources */,
-				5B38E01C17B7BFB000422EC1 /* Default-568h@2x.png in Resources */,
+				5B6E666518123E4C005D8269 /* shareImage2.png in Resources */,
+				5B19CACD1810CA0A00B8220F /* Default-568h@2x.png in Resources */,
 				5BC237D11801BFD200C6CF6B /* MainStoryboard.storyboard in Resources */,
+				5BF6251E1810606200B58B64 /* Default@2x.png in Resources */,
+				5BF6251D1810606200B58B64 /* Default.png in Resources */,
+				5B6E666718123E8E005D8269 /* shareImage2@2x.png in Resources */,
+				5B19CAD31810DFF500B8220F /* temp2.png in Resources */,
 				5BC237D91801C01600C6CF6B /* shareIcon.png in Resources */,
 				5B38E01F17B7BFB000422EC1 /* MainStoryboard.storyboard in Resources */,
 				5BC237D01801BFD200C6CF6B /* InfoPlist.strings in Resources */,
@@ -474,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -488,6 +499,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

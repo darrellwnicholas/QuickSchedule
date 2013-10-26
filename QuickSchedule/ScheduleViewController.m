@@ -48,7 +48,9 @@
 
     self.title = @"Schedule";
     
-
+    UIToolbar *toolbar;
+    [toolbar setBarTintColor:[UIColor greenColor]];
+    [toolbar setTranslucent:NO];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -209,7 +211,7 @@
     [df setTimeStyle:NSDateFormatterShortStyle];
     //NSMutableArray *bobsDays = [[NSMutableArray alloc] init];
 
-    NSString *scheduleString = @"--Schedule--\n";
+    NSString *scheduleString = @"";
     
 
     
@@ -238,6 +240,8 @@
         scheduleString = [scheduleString stringByAppendingString:empString];
     }
     
+    scheduleString = [scheduleString stringByAppendingString:@"\n\nMade with QuickSchedule™\n"];
+    
     //NSLog(@"%@", scheduleString);
     NSMutableArray *addresses = [[NSMutableArray alloc]init];
     for (Employee *emp in [[MyManager sharedManager] masterEmployeeList]) {
@@ -249,6 +253,7 @@
     [mailComposer setToRecipients:addresses];
     [mailComposer setSubject:@"Schedule"];
     [mailComposer setMessageBody:scheduleString isHTML:NO];
+    
      [self presentViewController:mailComposer animated:YES completion:nil];
 
 }

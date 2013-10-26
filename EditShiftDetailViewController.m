@@ -61,19 +61,13 @@ static NSString *kOtherCell = @"otherCell";     // the remaining cells at the en
     // setup our data source
     NSMutableDictionary *itemOne = [@{ kTitleKey : @"Tap a cell to change its value:" } mutableCopy];
     NSMutableDictionary *itemTwo = [@{ kTitleKey : @"Shift Name:" } mutableCopy];
-    
-    // Change these to kDateKey : self.currentShift.startTime
-    // and kDateKey : self.currentShift.endTime
-    
     NSMutableDictionary *itemThree = [@{ kTitleKey : @"Start Time",
                                          kDateKey : self.currentShift.startTime } mutableCopy];
-    
     NSMutableDictionary *itemFour = [@{ kTitleKey : @"End Time",
                                         kDateKey : self.currentShift.endTime } mutableCopy];
-    // Change to kTitleKey : [NSString stringWithFormat: @"Shift Length: %@", [self.currentShift.length] description]
    NSMutableDictionary *itemFive = [@{ kTitleKey : @"" } mutableCopy] ;
     self.dataArray = @[itemOne, itemTwo, itemThree, itemFour, itemFive];
-    //self.dataArray = @[itemOne, itemTwo, itemThree, itemFour];
+
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterNoStyle];    // Don't show date
@@ -107,8 +101,6 @@ static NSString *kOtherCell = @"otherCell";     // the remaining cells at the en
 - (void) hideKeyboard
 {
     [self.view endEditing:YES];
-    //[self.tableView reloadData];
-    
 }
 
 - (void)dealloc
@@ -536,6 +528,3 @@ NSUInteger DeviceSystemMajorVersion()
 }
 
 @end
-
-
-

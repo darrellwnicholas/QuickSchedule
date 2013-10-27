@@ -32,14 +32,14 @@
             <objects>
                 <tableViewController id="Xy4-Hk-b0h" customClass="ScheduleViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6gc-N4-UZe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.11800655241935484" green="0.65243825604838712" blue="0.12859122983870969" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="9Wt-mS-DR1" detailTextLabel="Hsv-U5-UOX" style="IBUITableViewCellStyleSubtitle" id="i3e-wl-f3e">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i3e-wl-f3e" id="Ngp-tw-Mj1">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -71,14 +71,12 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem title="Edit Shifts" id="pqD-OD-yJL">
-                            <color key="tintColor" red="0.21544228830645162" green="0.53858996975806406" blue="0.55349042338709675" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="YkB-fa-6Qg" kind="modal" identifier="EditShiftsSegue" id="E9m-Uw-fNM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="kl0-m9-aMr"/>
                         <barButtonItem image="shareImage2.png" style="plain" id="kwH-f7-cj8">
-                            <color key="tintColor" red="0.21544228830645162" green="0.53858996975806406" blue="0.55333291330645162" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="shareSchedule:" destination="Xy4-Hk-b0h" id="vMy-8s-fef"/>
                             </connections>
@@ -86,13 +84,13 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Schedule" id="rCh-kx-ORA">
                         <barButtonItem key="leftBarButtonItem" title="Day Order" id="QEo-PF-p5D">
-                            <color key="tintColor" red="0.21544228830000001" green="0.53858996979999996" blue="0.55333291330000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="ppc-1f-hFO" kind="modal" identifier="StartDaySegue" id="8kh-8H-XJM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NL-9t-e87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +137,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select Day" id="oCU-9I-Fx6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="iO6-3R-AOB">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="iO6-3R-AOB">
+                            <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Xtu-FC-XLc" kind="unwind" identifier="DoneEditing" unwindAction="done:" id="nbm-5e-cap"/>
                             </connections>
@@ -195,6 +194,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Day" id="4BF-vE-IPG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VEZ-FP-951">
+                            <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addShift:" destination="zU7-MS-aqM" id="cNe-Cz-XBu"/>
                             </connections>
@@ -210,13 +210,13 @@
             <objects>
                 <tableViewController id="znr-es-HjQ" customClass="EmployeesViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="X2a-Hu-ZwO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" textLabel="Qye-Xb-lZB" detailTextLabel="FFA-4h-uPN" style="IBUITableViewCellStyleSubtitle" id="uen-nx-idE">
-                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uen-nx-idE" id="ypl-gW-AHB">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -238,7 +238,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -381,11 +381,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Employee" id="lXR-Vi-fhS">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="62n-R3-4CF">
+                            <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Ic7-Z4-kew" kind="unwind" identifier="CancelInput" unwindAction="cancel:" id="aZZ-tg-JS7"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="5vu-rf-ZI8">
+                            <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Ic7-Z4-kew" kind="unwind" identifier="ReturnInput" unwindAction="done:" id="wcq-Sn-gMb"/>
                             </connections>
@@ -428,6 +430,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="8vq-F4-uuu">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="I4j-0R-LoC">
+                            <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="8LY-xE-bPG" kind="unwind" identifier="DoneEditing" unwindAction="done:" id="eEN-TJ-aaS"/>
                             </connections>

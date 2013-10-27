@@ -80,6 +80,7 @@ static NSString *kOtherCell = @"otherCell";     // the remaining cells at the en
     //self.shiftNameField.text = self.currentShift.shiftName;
     
     self.title = [NSString stringWithFormat:@"%@, %@", self.currentDay.name, self.currentShift.shiftName];
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:0.25 green:0.4 blue:0.4 alpha:1.0]];
     
     // if the local changes while in the background, we need to be notified so we can update the date
     // format in the table view cells

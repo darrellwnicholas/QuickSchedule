@@ -187,6 +187,7 @@
     newShift.shiftName = @"New Shift";
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setTimeStyle:NSDateFormatterShortStyle];
+    [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
     newShift.startTime = [df dateFromString:@"12:00 AM"];
     newShift.endTime = [df dateFromString:@"12:00 AM"];
     [self saveData];

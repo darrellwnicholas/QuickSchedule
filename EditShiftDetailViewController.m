@@ -85,10 +85,10 @@ static NSString *kOtherCell = @"otherCell";     // the remaining cells at the en
     // if the local changes while in the background, we need to be notified so we can update the date
     // format in the table view cells
     //
-    [[NSNotificationCenter defaultCenter] addObserver:self
+   /* [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(localeChanged:)
                                                  name:NSCurrentLocaleDidChangeNotification
-                                               object:nil];
+                                               object:nil];*/
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -103,14 +103,14 @@ static NSString *kOtherCell = @"otherCell";     // the remaining cells at the en
 {
     [self.view endEditing:YES];
 }
-
+/*
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSCurrentLocaleDidChangeNotification
                                                   object:nil];
 }
-
+*/
 
 #pragma mark - Locale
 

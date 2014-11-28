@@ -29,6 +29,13 @@
 		5BB548F3181D8A3C0055A94F /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548EF181D8A3C0055A94F /* AppIcon@2x.png */; };
 		5BB548F4181D8A3C0055A94F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548F0181D8A3C0055A94F /* iTunesArtwork.png */; };
 		5BB548F5181D8A3C0055A94F /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548F1181D8A3C0055A94F /* iTunesArtwork@2x.png */; };
+		5BB548F7181D8AA20055A94F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548F6181D8AA20055A94F /* Images.xcassets */; };
+		5BB548FE181D8F2A0055A94F /* AppIcon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548F9181D8F2A0055A94F /* AppIcon114x114.png */; };
+		5BB548FF181D8F2A0055A94F /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548FA181D8F2A0055A94F /* AppIcon57x57.png */; };
+		5BB54900181D8F2A0055A94F /* QS_Spotlight_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548FB181D8F2A0055A94F /* QS_Spotlight_80x80.png */; };
+		5BB54901181D8F2A0055A94F /* QS_Spotlight_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548FC181D8F2A0055A94F /* QS_Spotlight_120x120.png */; };
+		5BB54902181D8F2A0055A94F /* QS_Spotlight_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB548FD181D8F2A0055A94F /* QS_Spotlight_29x29.png */; };
+		5BB54904181D90CF0055A94F /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB54903181D90CF0055A94F /* AppIcon58x58.png */; };
 		5BB7C95E17E8D45900608790 /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7C95D17E8D45900608790 /* MyManager.m */; };
 		5BC119631801131F00DC2904 /* DayOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC119621801131F00DC2904 /* DayOrderViewController.m */; };
 		5BC237CF1801BFD200C6CF6B /* EmployeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237BA1801BFD200C6CF6B /* EmployeesViewController.m */; };
@@ -37,6 +44,11 @@
 		5BC237D41801BFD200C6CF6B /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC237C31801BFD200C6CF6B /* ScheduleViewController.m */; };
 		5BC237D91801C01600C6CF6B /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC237D81801C01600C6CF6B /* shareIcon.png */; };
 		5BCFBBE717BFA4F700C2ABC4 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */; };
+		5BE5A442183DC5EB00C834BC /* AppIcon-iPad76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE5A43D183DC5EB00C834BC /* AppIcon-iPad76.png */; };
+		5BE5A443183DC5EB00C834BC /* AppIcon-iPad76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE5A43E183DC5EB00C834BC /* AppIcon-iPad76@2x.png */; };
+		5BE5A444183DC5EB00C834BC /* LaunchImage-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE5A43F183DC5EB00C834BC /* LaunchImage-iPad.png */; };
+		5BE5A445183DC5EB00C834BC /* LaunchImage-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE5A440183DC5EB00C834BC /* LaunchImage-iPad@2x.png */; };
+		5BE5A446183DC5EB00C834BC /* Spotlight-iPad40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE5A441183DC5EB00C834BC /* Spotlight-iPad40.png */; };
 		5BF6251D1810606200B58B64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6251A1810606200B58B64 /* Default.png */; };
 		5BF6251E1810606200B58B64 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6251B1810606200B58B64 /* Default@2x.png */; };
 /* End PBXBuildFile section */
@@ -78,6 +90,13 @@
 		5BB548EF181D8A3C0055A94F /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
 		5BB548F0181D8A3C0055A94F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		5BB548F1181D8A3C0055A94F /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		5BB548F6181D8AA20055A94F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BB548F9181D8F2A0055A94F /* AppIcon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon114x114.png; sourceTree = "<group>"; };
+		5BB548FA181D8F2A0055A94F /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		5BB548FB181D8F2A0055A94F /* QS_Spotlight_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QS_Spotlight_80x80.png; sourceTree = "<group>"; };
+		5BB548FC181D8F2A0055A94F /* QS_Spotlight_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QS_Spotlight_120x120.png; sourceTree = "<group>"; };
+		5BB548FD181D8F2A0055A94F /* QS_Spotlight_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QS_Spotlight_29x29.png; sourceTree = "<group>"; };
+		5BB54903181D90CF0055A94F /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
 		5BB7C95C17E8D45900608790 /* MyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
 		5BB7C95D17E8D45900608790 /* MyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
 		5BC119611801131F00DC2904 /* DayOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOrderViewController.h; sourceTree = "<group>"; };
@@ -106,6 +125,11 @@
 		5BCFBBE617BFA4F700C2ABC4 /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 		5BCFBBE817BFB66900C2ABC4 /* EmployeeDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDataController.h; sourceTree = "<group>"; };
 		5BCFBBE917BFB66900C2ABC4 /* EmployeeDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDataController.m; sourceTree = "<group>"; };
+		5BE5A43D183DC5EB00C834BC /* AppIcon-iPad76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-iPad76.png"; sourceTree = "<group>"; };
+		5BE5A43E183DC5EB00C834BC /* AppIcon-iPad76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon-iPad76@2x.png"; sourceTree = "<group>"; };
+		5BE5A43F183DC5EB00C834BC /* LaunchImage-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-iPad.png"; sourceTree = "<group>"; };
+		5BE5A440183DC5EB00C834BC /* LaunchImage-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-iPad@2x.png"; sourceTree = "<group>"; };
+		5BE5A441183DC5EB00C834BC /* Spotlight-iPad40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight-iPad40.png"; sourceTree = "<group>"; };
 		5BF6251A1810606200B58B64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5BF6251B1810606200B58B64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +152,7 @@
 		5B38DFF917B7BFB000422EC1 = {
 			isa = PBXGroup;
 			children = (
+				5BB548F8181D8EFC0055A94F /* Final Art */,
 				5BB548EE181D8A3C0055A94F /* AppIcon.png */,
 				5BB548EF181D8A3C0055A94F /* AppIcon@2x.png */,
 				5BB548F0181D8A3C0055A94F /* iTunesArtwork.png */,
@@ -210,6 +235,24 @@
 			name = "Model Classes";
 			sourceTree = "<group>";
 		};
+		5BB548F8181D8EFC0055A94F /* Final Art */ = {
+			isa = PBXGroup;
+			children = (
+				5BE5A43D183DC5EB00C834BC /* AppIcon-iPad76.png */,
+				5BE5A43E183DC5EB00C834BC /* AppIcon-iPad76@2x.png */,
+				5BE5A43F183DC5EB00C834BC /* LaunchImage-iPad.png */,
+				5BE5A440183DC5EB00C834BC /* LaunchImage-iPad@2x.png */,
+				5BE5A441183DC5EB00C834BC /* Spotlight-iPad40.png */,
+				5BB54903181D90CF0055A94F /* AppIcon58x58.png */,
+				5BB548F9181D8F2A0055A94F /* AppIcon114x114.png */,
+				5BB548FA181D8F2A0055A94F /* AppIcon57x57.png */,
+				5BB548FB181D8F2A0055A94F /* QS_Spotlight_80x80.png */,
+				5BB548FC181D8F2A0055A94F /* QS_Spotlight_120x120.png */,
+				5BB548FD181D8F2A0055A94F /* QS_Spotlight_29x29.png */,
+			);
+			name = "Final Art";
+			sourceTree = "<group>";
+		};
 		5BB7C95B17E8D42000608790 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +292,7 @@
 				5BC237C11801BFD200C6CF6B /* QuickSchedule-Prefix.pch */,
 				5BC237C21801BFD200C6CF6B /* ScheduleViewController.h */,
 				5BC237C31801BFD200C6CF6B /* ScheduleViewController.m */,
+				5BB548F6181D8AA20055A94F /* Images.xcassets */,
 			);
 			path = QuickSchedule;
 			sourceTree = "<group>";
@@ -358,18 +402,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B38E01017B7BFB000422EC1 /* InfoPlist.strings in Resources */,
+				5BB548FF181D8F2A0055A94F /* AppIcon57x57.png in Resources */,
+				5BB548F7181D8AA20055A94F /* Images.xcassets in Resources */,
+				5BE5A445183DC5EB00C834BC /* LaunchImage-iPad@2x.png in Resources */,
 				5BB548F5181D8A3C0055A94F /* iTunesArtwork@2x.png in Resources */,
 				5B6E666518123E4C005D8269 /* shareImage2.png in Resources */,
 				5B19CACD1810CA0A00B8220F /* Default-568h@2x.png in Resources */,
 				5BC237D11801BFD200C6CF6B /* MainStoryboard.storyboard in Resources */,
+				5BB54904181D90CF0055A94F /* AppIcon58x58.png in Resources */,
 				5BF6251E1810606200B58B64 /* Default@2x.png in Resources */,
 				5BF6251D1810606200B58B64 /* Default.png in Resources */,
+				5BB54901181D8F2A0055A94F /* QS_Spotlight_120x120.png in Resources */,
 				5B6E666718123E8E005D8269 /* shareImage2@2x.png in Resources */,
 				5B19CAD31810DFF500B8220F /* temp2.png in Resources */,
+				5BB548FE181D8F2A0055A94F /* AppIcon114x114.png in Resources */,
 				5BB548F3181D8A3C0055A94F /* AppIcon@2x.png in Resources */,
 				5BB548F2181D8A3C0055A94F /* AppIcon.png in Resources */,
+				5BE5A444183DC5EB00C834BC /* LaunchImage-iPad.png in Resources */,
 				5BB548F4181D8A3C0055A94F /* iTunesArtwork.png in Resources */,
 				5BC237D91801C01600C6CF6B /* shareIcon.png in Resources */,
+				5BB54902181D8F2A0055A94F /* QS_Spotlight_29x29.png in Resources */,
+				5BB54900181D8F2A0055A94F /* QS_Spotlight_80x80.png in Resources */,
+				5BE5A446183DC5EB00C834BC /* Spotlight-iPad40.png in Resources */,
+				5BE5A443183DC5EB00C834BC /* AppIcon-iPad76@2x.png in Resources */,
+				5BE5A442183DC5EB00C834BC /* AppIcon-iPad76.png in Resources */,
 				5B38E01F17B7BFB000422EC1 /* MainStoryboard.storyboard in Resources */,
 				5BC237D01801BFD200C6CF6B /* InfoPlist.strings in Resources */,
 			);
@@ -461,7 +517,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -485,7 +541,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -495,12 +551,14 @@
 		5B38E02617B7BFB000422EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -510,12 +568,14 @@
 		5B38E02717B7BFB000422EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

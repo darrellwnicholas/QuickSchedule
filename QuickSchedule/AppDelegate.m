@@ -27,6 +27,7 @@
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
     NSString *startTime1 = @"6:00 AM";
     NSString *startTime2 = @"2:00 PM";
     NSString *endTime1 = startTime2;

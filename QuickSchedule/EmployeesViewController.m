@@ -102,7 +102,7 @@
     NSInteger ti = (NSInteger)interval;
     NSInteger minutes = (ti / 60) % 60;
     NSInteger hour = (ti / 3600);
-    return [NSString stringWithFormat:@"%i:%02i Hours", hour, minutes];
+    return [NSString stringWithFormat:@"%li:%02li Hours", (long)hour, (long)minutes];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

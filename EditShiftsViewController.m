@@ -110,7 +110,7 @@
     }
     WorkDay *day = [[[MyManager sharedManager] daysArray] objectAtIndex:indexPath.section];
     cell.textLabel.text = [NSString stringWithFormat:@"Tap to edit %@", day.name];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i Shifts",[day.shifts count]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu Shifts",(unsigned long)[day.shifts count]];
     
     return cell;
 }

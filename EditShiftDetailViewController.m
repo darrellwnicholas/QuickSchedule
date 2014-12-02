@@ -325,6 +325,7 @@ NSUInteger DeviceSystemMajorVersion()
             
             cell.textLabel.text = [NSString stringWithFormat:@"Shift Length %@ hours", cellText];
         } else { */
+        
         cell.textLabel.text = [itemData valueForKey:kTitleKey];
        // }
     }

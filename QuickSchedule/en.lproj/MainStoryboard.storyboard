@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OUo-Gx-nZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C68m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OUo-Gx-nZw">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -31,11 +31,13 @@
         <scene sceneID="OSO-aw-VOo">
             <objects>
                 <tableViewController id="Xy4-Hk-b0h" customClass="ScheduleViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6gc-N4-UZe">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6gc-N4-UZe">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.11800655241935484" green="0.65243825604838712" blue="0.12859122983870969" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="1" green="0.0" blue="0.29181570029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="9Wt-mS-DR1" detailTextLabel="Hsv-U5-UOX" style="IBUITableViewCellStyleSubtitle" id="i3e-wl-f3e">
@@ -100,7 +102,7 @@
         <scene sceneID="P4u-Bi-euy">
             <objects>
                 <tableViewController id="Bqg-Q0-aGz" customClass="EditShiftsViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="JQK-Bc-VaS">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="36" sectionHeaderHeight="10" sectionFooterHeight="1" id="JQK-Bc-VaS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -194,6 +196,13 @@
                             <outlet property="delegate" destination="zU7-MS-aqM" id="SVw-BF-Ct9"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oLe-LO-Eqg"/>
+                        <barButtonItem title="Add or Delete Shifts" id="JWa-90-7gq">
+                            <color key="tintColor" red="0.3803921569" green="0.56470588239999997" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="53P-Sn-JRb"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Day" id="4BF-vE-IPG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VEZ-FP-951">
                             <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,6 +441,13 @@
                             <outlet property="delegate" destination="qY1-6M-epf" id="dpn-vh-Pqr"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QUq-rf-fy0"/>
+                        <barButtonItem title="Change Work Week Start Day" id="gnY-06-BRt">
+                            <color key="tintColor" red="0.3803921569" green="0.56470588239999997" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iWe-pq-iYJ"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="8vq-F4-uuu">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="I4j-0R-LoC">
                             <color key="tintColor" red="0.25098039215686274" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -467,13 +483,16 @@
         <!--Navigation Controller-->
         <scene sceneID="uUu-cu-DEw">
             <objects>
-                <navigationController id="YkB-fa-6Qg" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="YkB-fa-6Qg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfQ-D9-gcf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4TR-Sn-9YI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Bqg-Q0-aGz" kind="relationship" relationship="rootViewController" id="GKO-Rd-hqo"/>
                     </connections>
@@ -487,7 +506,7 @@
             <objects>
                 <tableViewController id="ACz-gW-qnc" customClass="EditShiftDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="l4A-ht-aVI">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="1" green="0.0" blue="0.29181570029999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -575,7 +594,13 @@
                         <sections/>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="uoE-Ju-i55"/>
+                        <barButtonItem title="Edit Name, Start and Stop Time" id="NpP-8X-Eg3">
+                            <color key="tintColor" red="0.3803921569" green="0.56470588239999997" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LuX-Lw-AZM"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="g0W-Mf-B8I"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -606,13 +631,16 @@
         <!--Navigation Controller-->
         <scene sceneID="9fD-JW-5cX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ppc-1f-hFO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="ppc-1f-hFO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8x7-mr-hqf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="UBV-NH-FNC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="qY1-6M-epf" kind="relationship" relationship="rootViewController" id="8e2-p0-Lsx"/>
                     </connections>

@@ -10,9 +10,10 @@
 #import "EmployeesViewController.h"
 #import "EditShiftsViewController.h"
 #import "MyManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ScheduleViewController ()
-
+@property (nonatomic) NSData *pdfData;
 
 @end
 
@@ -63,6 +64,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.pdfData = nil;
 }
 
 - (IBAction)done:(UIStoryboardSegue *)segue
@@ -219,7 +221,7 @@
 
     NSString *scheduleString = @"";
     
-
+    
     
     for (WorkDay *day in [[MyManager sharedManager] daysArray]) {
         NSString *dayString = [NSString stringWithFormat:@"----\n%@\n", day.name];
@@ -254,13 +256,64 @@
         [addresses addObject:emp.email];
     }
     
+    [self createPDFfromUIView:self.tableView saveToDocumentsWithFileName:@"Schedule.pdf"];
+    
+    
+    
     mailComposer = [[MFMailComposeViewController alloc]init];
     mailComposer.mailComposeDelegate = self;
     [mailComposer setToRecipients:addresses];
     [mailComposer setSubject:@"Schedule"];
+    [mailComposer addAttachmentData:self.pdfData mimeType:@"application/pdf" fileName:@"Schedule.pdf"];
     [mailComposer setMessageBody:scheduleString isHTML:NO];
     
      [self presentViewController:mailComposer animated:YES completion:nil];
 
+    
 }
+
+-(void)createPDFfromUIView:(UIView*)aView saveToDocumentsWithFileName:(NSString*)aFilename
+{
+    CGRect priorBounds = aView.bounds;
+    CGSize fittedSize = [aView sizeThatFits:CGSizeMake(priorBounds.size.width, HUGE_VALF)];
+    aView.bounds = CGRectMake(0, 0, fittedSize.width, fittedSize.height);
+    
+    CGRect pdfPageBounds = CGRectMake(0, 0, 612, 792);
+    // Creates a mutable data object for updating with binary data, like a byte array
+    NSMutableData *pdfData = [[NSMutableData alloc]init];
+    
+    // Points the pdf converter to the mutable data object and to the UIView to be converted
+    UIGraphicsBeginPDFContextToData(pdfData, pdfPageBounds, nil); {
+        for (CGFloat pageOriginY = 0; pageOriginY < fittedSize.height; pageOriginY += pdfPageBounds.size.height) {
+            UIGraphicsBeginPDFPageWithInfo(pdfPageBounds, nil);
+            CGContextSaveGState(UIGraphicsGetCurrentContext()); {
+                CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0, -pageOriginY);
+                [aView.layer renderInContext:UIGraphicsGetCurrentContext()];
+            }
+        } UIGraphicsEndPDFContext();
+        aView.bounds = priorBounds;
+    }
+//    UIGraphicsBeginPDFPage();
+//    CGContextRef pdfContext = UIGraphicsGetCurrentContext();
+//    
+//    
+//    // draws rect to the view and thus this is captured by UIGraphicsBeginPDFContextToData
+//    
+//    [aView.layer renderInContext:pdfContext];
+//    
+//    // remove PDF rendering context
+//    UIGraphicsEndPDFContext();
+    
+    // Retrieves the document directories from the iOS device
+    NSArray* documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    
+    NSString* documentDirectory = [documentDirectories objectAtIndex:0];
+    NSString* documentDirectoryFilename = [documentDirectory stringByAppendingPathComponent:aFilename];
+    
+    // instructs the mutable data object to write its context to a file on disk
+    [pdfData writeToFile:documentDirectoryFilename atomically:YES];
+    self.pdfData = pdfData;
+    NSLog(@"documentDirectoryFileName: %@",documentDirectoryFilename);
+}
+
 @end

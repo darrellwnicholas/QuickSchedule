@@ -54,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B03F7381AD35E7600882541 /* QuickSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickSchedule.entitlements; sourceTree = "<group>"; };
 		5B0E186B17D4E43000237B76 /* EditDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDayViewController.h; sourceTree = "<group>"; };
 		5B0E186C17D4E43000237B76 /* EditDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDayViewController.m; sourceTree = "<group>"; };
 		5B0E186E17D4E4E000237B76 /* EditShiftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditShiftDetailViewController.h; sourceTree = "<group>"; };
@@ -278,6 +279,7 @@
 		5BC237AF1801BFD200C6CF6B /* QuickSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				5B03F7381AD35E7600882541 /* QuickSchedule.entitlements */,
 				5BC237B01801BFD200C6CF6B /* AppDelegate.h */,
 				5BC237B11801BFD200C6CF6B /* AppDelegate.m */,
 				5BC237B21801BFD200C6CF6B /* Default-568h@2x.png */,
@@ -376,6 +378,11 @@
 				TargetAttributes = {
 					5B38E00117B7BFB000422EC1 = {
 						DevelopmentTeam = YAZVT7PQ49;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -542,6 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -553,12 +561,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = QuickSchedule/QuickSchedule.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -570,12 +579,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = QuickSchedule/QuickSchedule.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickSchedule/QuickSchedule-Prefix.pch";
 				INFOPLIST_FILE = "QuickSchedule/QuickSchedule-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

@@ -63,6 +63,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    NSArray *emps = [[MyManager sharedManager] masterEmployeeList];
+//    NSMutableArray *daze = [[MyManager sharedManager] daysArray];
+//    //daysArray = daze;
+//    NSLog(@"Trying to give employees and days time to be created: emps = %@, days = %@", emps, daze);
+//    NSLog(@"ScheduleViewController viewDidLoad called here");
+//    [self.tableView reloadData];
 }
 
 - (IBAction)done:(UIStoryboardSegue *)segue

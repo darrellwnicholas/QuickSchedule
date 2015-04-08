@@ -16,11 +16,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"hasBeenLaunched"]) {
-        [self configureDays];
-    }
+    MyManager *mngr = [MyManager sharedManager];
+
+        NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.YAZVT7PQ49.com.darrellnicholas.QuickSchedule"];
+        if (![defaults boolForKey:@"hasBeenLaunched"]) {
+            NSString *documentDirectory = [self applicationDocumentsDirectory];
+            NSString *src = [documentDirectory stringByAppendingPathComponent:@"days.plist"];
+            NSString *src2 = [documentDirectory stringByAppendingPathComponent:@"employees.plist"];
+            NSFileManager *mgr = [[NSFileManager alloc] init];
+
+            if ([mgr fileExistsAtPath:src] || [mgr fileExistsAtPath:src2]) {
+                mngr.daysArray = [NSKeyedUnarchiver unarchiveObjectWithFile:src];
+                mngr.masterEmployeeList = [NSKeyedUnarchiver unarchiveObjectWithFile:src2];
+                [mngr saveChanges];
+                [mgr removeItemAtPath:src error:nil];
+                [mgr removeItemAtPath:src2 error:nil];
+                
+            } else {
+                [self configureDays];
+            }
+        }
+    
     return YES;
+}
+
+- (NSString *)applicationDocumentsDirectory {
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
 - (void)configureDays
@@ -139,9 +160,9 @@
     } else {
         NSLog(@"Saved");
     }
-    
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasBeenLaunched"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.YAZVT7PQ49.com.darrellnicholas.QuickSchedule"];
+    [defaults setBool:YES forKey:@"hasBeenLaunched"];
+    [defaults synchronize];
     
     
 }
@@ -172,5 +193,41 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+/*
+ COMMENTS Moved out of ApplicationDidFinishLaunchingWithOptions
+ 
+ // Override point for customization after application launch.
+ //    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"hasBeenLaunched"] != nil) && [[NSUserDefaults standardUserDefaults] boolForKey:@"hasBeenLaunched"] == YES) {
+ //        NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.YAZVT7PQ49.com.darrellnicholas.QuickSchedule"];
+ //        [defaults setBool:YES forKey:@"hasBeenLaunched"];
+ //        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"hasBeenLaunched"];
+ //        // move item archive path
+ //
+ //        NSString *documentDirectory = [self applicationDocumentsDirectory];
+ //        NSString *src = [documentDirectory stringByAppendingPathComponent:@"days.plist"];
+ //        NSFileManager *mgr = [[NSFileManager alloc] init];
+ //        NSLog(@"item archive path = %@", [mngr itemArchivePath]);
+ //        NSLog(@"path before moving= %@", src);
+ //        if (![mgr moveItemAtPath:src toPath:[mngr itemArchivePath] error:nil]) {
+ //            NSLog(@"Did Not Move days.plist");
+ //        } else {
+ //            NSLog(@"Moved days.plist to shared app group");
+ //        }
+ //
+ //        // move employees.plist
+ //        NSString *src2 = [documentDirectory stringByAppendingPathComponent:@"employees.plist"];
+ //        if (![mgr moveItemAtPath:src2 toPath:[mngr employeeArchivePath] error:nil]) {
+ //            NSLog(@"Did Not Move Employees.plist");
+ //        } else {
+ //            NSLog(@"Yesss! We moved the employees.plist too!");
+ //        }
+ //        [defaults synchronize];
+ //    } else {
+ 
+ 
+ //    }
+ //    NSLog(@"Item Archive Path = %@",[[MyManager sharedManager] itemArchivePath]);
+ //    NSLog(@"Employee Arc Path = %@",[[MyManager sharedManager] employeeArchivePath]);
+ */
 
 @end

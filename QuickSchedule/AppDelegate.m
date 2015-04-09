@@ -28,6 +28,14 @@
             if ([mgr fileExistsAtPath:src] || [mgr fileExistsAtPath:src2]) {
                 mngr.daysArray = [NSKeyedUnarchiver unarchiveObjectWithFile:src];
                 mngr.masterEmployeeList = [NSKeyedUnarchiver unarchiveObjectWithFile:src2];
+                for (WorkDay *d in mngr.daysArray) {
+                    for (WorkShift *s in d.shifts) {
+                        if ([s.inDay isEqualToString:@""]) {
+                            s.inDay = d.name;
+                        }
+                        
+                    }
+                }
                 [mngr saveChanges];
                 [mgr removeItemAtPath:src error:nil];
                 [mgr removeItemAtPath:src2 error:nil];

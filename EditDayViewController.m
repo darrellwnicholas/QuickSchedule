@@ -185,6 +185,7 @@
     WorkShift *newShift = [[WorkShift alloc] init];
     [self.currentDay.shifts addObject:newShift];
     newShift.shiftName = @"New Shift";
+    newShift.inDay = self.currentDay.name;
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setTimeStyle:NSDateFormatterShortStyle];
     [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>QuickSchedule WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>QuickSchedule.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>5B38E00117B7BFB000422EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BFC6B621AD5AB700087243D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

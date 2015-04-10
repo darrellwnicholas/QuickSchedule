@@ -20,7 +20,6 @@
     [super awakeWithContext:context];
     self.selectedShift = (WorkShift *)context;
     // Configure interface objects here.
-    NSLog(@"selected shift: %@", self.selectedShift.shiftName);
     MyManager *manager = [MyManager sharedManager];
     self.employees = manager.masterEmployeeList;
     [_table setNumberOfRows:[manager countOfList] withRowType:@"EmployeeRowType"];

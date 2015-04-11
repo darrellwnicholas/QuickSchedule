@@ -3,26 +3,40 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Settings87x87@3x.png",
+      "filename" : "29x29@2x-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "29x29@3x-1.png",
       "scale" : "3x"
     },
     {
+      "idiom" : "iphone",
       "size" : "40x40",
+      "scale" : "2x"
+    },
+    {
       "idiom" : "iphone",
-      "filename" : "Spotlight@3x120x120.png",
+      "size" : "40x40",
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "AppIcon@3x180x180.png",
+      "size" : "60x60",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "60x60",
       "scale" : "3x"
     },
     {
       "size" : "24x24",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "NotificationCenter48px.png",
+      "filename" : "48x48.png",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
@@ -30,21 +44,21 @@
       "size" : "27.5x27.5",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "NotificationCenter55px.png",
+      "filename" : "55x55.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "AppIconOniPhone@2x.png",
+      "filename" : "29x29@2x.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "AppIconOniPhone@3x.png",
+      "filename" : "29x29@3x.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
@@ -52,7 +66,7 @@
       "size" : "40x40",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "HomeScreen80px.png",
+      "filename" : "80x80.png",
       "role" : "appLauncher",
       "subtype" : "38mm"
     },
@@ -60,7 +74,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "LongLookIcon88px.png",
+      "filename" : "88x88.png",
       "role" : "longLook",
       "subtype" : "42mm"
     },
@@ -68,7 +82,7 @@
       "size" : "86x86",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "ShortLookIcon172px.png",
+      "filename" : "172x172.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
@@ -76,7 +90,7 @@
       "size" : "98x98",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "ShortLookIcon196px.png",
+      "filename" : "196x196.png",
       "role" : "quickLook",
       "subtype" : "42mm"
     }
